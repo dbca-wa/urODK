@@ -8,19 +8,17 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dbca-wa/urODK/master?urlpath=rstudio)
 <!-- badges: end -->
 
-## Quickstart
+## Install
 
 To run urODK in a hosted, disposable RStudio instance, hit the “binder”
 button. To install urODK in your own environment:
-
-### Install
 
 ``` r
 if (!requireNamespace("remotes")) {install.packages("remotes")}
 remotes::install_github("dbca-wa/urODK", dependencies = TRUE, upgrade = "ask")
 ```
 
-### Configure
+## Configure
 
 Get credentials (un, pw) for the given ODK Central instance and run:
 
@@ -43,7 +41,7 @@ ODKC_UN="xxx"
 ODKC_PW="xxx"
 ```
 
-### Get your hands dirty
+## Get your hands dirty
 
 Start with a colour-by-numbers workflow example: If using RStudio,
 create a new RMarkdown workbook “from template” and select ruODK’s
