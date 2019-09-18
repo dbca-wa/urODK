@@ -19,6 +19,10 @@ knitr::opts_chunk$set(
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dbca-wa/urODK/master?urlpath=rstudio)
 <!-- badges: end -->
 
+urODK is the companion package to [ruODK]((https://dbca-wa.github.io/ruODK/)), 
+an R client for the ODK Central API. urODK can be a starting point for new 
+projects consuming data from ODK Central, or be used in a hands-on workshop.
+
 ## Install
 To run urODK in a hosted, disposable RStudio instance, hit the "binder" button.
 To install urODK in your own environment:
