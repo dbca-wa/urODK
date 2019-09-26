@@ -36,6 +36,8 @@ Dirty tricks:
   - You can open ODK Build in more than one browser tabs.
   - You can select (or shift-select several) widgets, then drag and drop
     them between ODK Build forms.
+  - You can bulk-edit select1 options, paste from a spreadsheet, and
+    save them for future re-use across forms.
 
 Fail-safe: Use any of the [ruODK example
 forms](https://github.com/dbca-wa/ruODK/tree/master/inst/extdata).
