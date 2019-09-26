@@ -17,7 +17,7 @@ In about one hour, we’ll build an electronic data capture pipeline from
 form design to data analysis and dissemination using OpenDataKit and
 ruODK.
 
-## Build a form
+## Build a form <a href="#build"></a>
 
 There are many ways to create a valid XForm. The friendliest way is to
 use ODK Build, a drag-and-drop online form designer.
@@ -25,18 +25,20 @@ use ODK Build, a drag-and-drop online form designer.
 Reference: [ODK Build docs](https://docs.opendatakit.org/build-intro/)
 
   - Sign up at [build.opendatakit.org](https://build.opendatakit.org/)
-  - Create a form, save, export as XML. (10 min)
+  - [Build a
+    form](https://docs.opendatakit.org/build-intro/#form-building),
+    save, [export as
+    XML](https://docs.opendatakit.org/build-intro/#export-forms). (10
+    min)
 
-Fail-safe: ruODK comes with a few example forms, including the one used
-in the package vignettes. See
-[extdata](https://github.com/dbca-wa/ruODK/tree/master/inst/extdata) for
-other forms provided by
-ruODK.
+Dirty tricks:
 
-``` r
-system.file("extdata/FloraQuadrat04.xml", package="ruODK") # main ruODK example
-system.file("extdata/Spotlighting06.xml", package="ruODK")
-```
+  - You can open ODK Build in more than one browser tabs.
+  - You can select (or shift-select several) widgets, then drag and drop
+    them between ODK Build forms.
+
+Fail-safe: Use any of the [ruODK example
+forms](https://github.com/dbca-wa/ruODK/tree/master/inst/extdata).
 
 ## Distribute form
 
@@ -47,8 +49,9 @@ docs](https://docs.opendatakit.org/central-using/)
 
   - Request an account at the [ODK Central
     Sandbox](https://sandbox.central.opendatakit.org/#/login?next=%2F)
-      - by asking @yawanokwa on the [ODK
-        Forum](https://forum.opendatakit.org/)
+      - by asking
+        \[@yanokwa\](<https://forum.opendatakit.org/u/yanokwa/summary>)
+        on the [ODK Forum](https://forum.opendatakit.org/)
       - by asking the workshop presenter (10 min pre workshop)
       - you’ll need an email, which will become your ODK Central
         username
@@ -81,7 +84,7 @@ Collect settings). (10 min)
 Fail-safe: The presenter can bring a few pre-configured Android devices.
 The example forms already contain collected data.
 
-## Access and analyse data
+## Analyse data <a href="#ru-ready-to-rock"></a>
 
 Run through the steps shown in the first part of the README:
 
