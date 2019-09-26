@@ -17,6 +17,10 @@ In about one hour, we’ll build an electronic data capture pipeline from
 form design to data analysis and dissemination using OpenDataKit and
 ruODK.
 
+Before we start, read the brief
+[overview](https://dbca-wa.github.io/ruODK/) of electronic data capture
+using OpenDataKit, and how ruODK fits into that picture.
+
 ## Build a form <a href="#build"></a>
 
 There are many ways to create a valid XForm. The friendliest way is to
