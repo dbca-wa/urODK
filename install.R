@@ -10,7 +10,7 @@ remotes::install_github("dbca-wa/ruODK", dependencies = TRUE)
 install.packages("janitor")
 
 # Data visualisation
-# install.packages("skimr") # curently broken: Internal error: Expected call in `quo_invert()`
+install.packages("skimr")
 install.packages("DT")
 install.packages("ggplot2")
 install.packages("leaflet")
