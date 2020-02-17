@@ -102,14 +102,16 @@ Run through the steps shown in the first part of the README:
 
 ### Install ruODK
 
-To run urODK in a hosted, disposable RStudio instance, hit the “binder”
-button. To install urODK in your own environment, run this (preferably
-ahead of the workshop):
+  - To run the ruODK workshop in a hosted, disposable RStudio instance,
+    hit the “binder” button.
+  - To install ruODK in your own environment, run this (preferably ahead
+    of the workshop to allow time for troubleshooting):
+
+<!-- end list -->
 
 ``` r
 if (!requireNamespace("remotes")) {install.packages("remotes")}
 remotes::install_github("dbca-wa/ruODK", force = T, dependencies = T, upgrade = "ask")
-remotes::install_github("dbca-wa/urODK", force = T)
 ```
 
 ### Configure ruODK
@@ -123,7 +125,9 @@ ruODK::ru_setup(
   svc = paste0("https://sandbox.central.opendatakit.org/v1/projects/14/",
                "forms/build_Flora-Quadrat-0-4_1564384341.svc"), 
   un = "me@email.com", 
-  pw = "..."
+  pw = "...",
+  tz = "Australia/Perth", # your local timezone
+  verbose = TRUE
 )
 ```
 

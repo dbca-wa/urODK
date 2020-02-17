@@ -9,7 +9,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "100%",
+  eval = FALSE
 )
 ```
 
@@ -88,18 +89,19 @@ example forms already contain collected data.
 Run through the steps shown in the first part of the README:
 
 * Install ruODK. (10 min pre workshop)
-* Configure ruODK through .Renviron (ODK Central Sandbox un,pw, default project/form). (5 min)
+* Configure ruODK through .Renviron (ODK Central Sandbox un,pw, default 
+  project/form). (5 min)
 * Create an Rmd from template "OData" and follow instructions within. (15 min)
 
 ### Install ruODK
-To run urODK in a hosted, disposable RStudio instance, hit the "binder" button.
-To install urODK in your own environment, run this (preferably ahead of the 
-workshop):
+* To run the ruODK workshop in a hosted, disposable RStudio instance, hit the 
+  "binder" button.
+* To install ruODK in your own environment, run this (preferably ahead of the 
+  workshop to allow time for troubleshooting):
 
-```{r quickstart, eval=F}
+```{r quickstart}
 if (!requireNamespace("remotes")) {install.packages("remotes")}
 remotes::install_github("dbca-wa/ruODK", force = T, dependencies = T, upgrade = "ask")
-remotes::install_github("dbca-wa/urODK", force = T)
 ```
 
 ### Configure ruODK
@@ -111,13 +113,15 @@ ruODK::ru_setup(
   svc = paste0("https://sandbox.central.opendatakit.org/v1/projects/14/",
                "forms/build_Flora-Quadrat-0-4_1564384341.svc"), 
   un = "me@email.com", 
-  pw = "..."
+  pw = "...",
+  tz = "Australia/Perth", # your local timezone
+  verbose = TRUE
 )
 ```
 
 Or add to `.Renviron` via `usethis::edit_r_environ()` (with your own un and pw):
 
-```{r eval=FALSE}
+```{r renviron}
 ODKC_URL="https://sandbox.central.opendatakit.org"
 ODKC_PID=14
 ODKC_FID="build_Flora-Quadrat-0-4_1564384341"
@@ -130,7 +134,7 @@ Start with a colour-by-numbers workflow example:
 If using RStudio, create a new RMarkdown workbook "from template" and select 
 ruODK's template "OData", or run the next chunk with a filename of your choice:
 
-```{r, eval=FALSE}
+```{r rmd_template}
 rmarkdown::draft("my_example.Rmd", "odata", package="ruODK")
 ```
 
