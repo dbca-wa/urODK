@@ -4,6 +4,7 @@
 # Package management
 install.packages("remotes")
 install.packages("usethis")
+install.packages("XML", type = "source")
 remotes::install_github("dbca-wa/ruODK@main", dependencies = TRUE)
 
 # Data wrangling
