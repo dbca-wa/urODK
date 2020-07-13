@@ -4,7 +4,7 @@
 # Package management
 install.packages("remotes")
 install.packages("usethis")
-remotes::install_github("dbca-wa/ruODK", dependencies = TRUE)
+remotes::install_github("dbca-wa/ruODK@main", dependencies = TRUE)
 
 # Data wrangling
 install.packages("janitor")
@@ -12,6 +12,7 @@ install.packages("janitor")
 # Data visualisation
 install.packages("skimr")
 install.packages("DT")
+install.packages("reactable")
 install.packages("ggplot2")
 install.packages("leaflet")
 install.packages("listviewer")
