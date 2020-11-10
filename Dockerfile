@@ -27,13 +27,19 @@ RUN install2.r --error \
   bitops \
   ckanr \
   googledrive \
+  fuzzyjoin \
   leaflet \
   leaflet.extras \
   leaflet.providers \
   leaftime \
   reactable \
   skimr \
-  usethis
+  usethis \
+  mapview \
+  leafpop \
+  leafem \
+  lattice \
+  sf
 
-RUN R -e "remotes::install_github('dbca-wa/ruODK@main', \
+RUN R -e "remotes::install_github('ropensci/ruODK@main', \
           dependencies = TRUE, ask=FALSE, update=FALSE)"
