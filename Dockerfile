@@ -9,7 +9,8 @@ ARG GITHUB_PAT
 ENV GITHUB_PAT=${GITHUB_PAT}
 
 # System dependencies ---------------------------------------------------------#
-RUN apt-get update && \
+USER root
+RUN sudo apt-get update && \
   apt remove -y libvorbis0a && \
   apt-get -y install --no-install-recommends \
   python3-venv python3-dev \
@@ -20,8 +21,8 @@ RUN apt-get update && \
   # DBCA deps:
   rsync mdbtools cargo libavfilter-dev libfontconfig1-dev libopenblas-dev \
   freetds-common libct4 libsybdb5 freetds-bin freetds-common freetds-dev \
-  libct4 libsybdb5 tdsodbc unixodbc
-#&& apt-get purge && #apt-get clean && rm -rf /var/lib/apt/lists/*
+  libct4 libsybdb5 tdsodbc unixodbc && \
+  apt-get purge && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # R packages ------------------------------------------------------------------#
 RUN install2.r --error \
