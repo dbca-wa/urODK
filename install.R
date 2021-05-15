@@ -19,6 +19,4 @@ install.packages("leafpop")
 install.packages("leafem")
 install.packages("lattice")
 install.packages("sf")
-
-RUN R -e "remotes::install_github('ropensci/ruODK@main', \
-          dependencies = TRUE, ask=FALSE, update=TRUE)"
+remotes::install_github('ropensci/ruODK@main', dependencies = TRUE, ask=FALSE, update=TRUE)
