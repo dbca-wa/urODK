@@ -145,3 +145,9 @@ rmarkdown::draft("my_example.Rmd", "odata", package="ruODK")
 ```
 
 Follow the instructions in the workbook to explore the data.
+
+## Contribute and develop
+
+Instructions to extend or maintain urODK are given in the [contributing
+guide](https://github.com/dbca-wa/urODK/blob/master/.github/CONTRIBUTING.md).
+Ideas, suggestions, bug reports and pull requests are welcome!
